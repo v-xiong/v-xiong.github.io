@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,7 +17,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,15 +30,27 @@ body, html {
     min-height: 100%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (Work) */
 .bgimg-2 {
     background-image: url("placeholder2.jpg");
     min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* Third image (Portfolio) */
 .bgimg-3 {
     background-image: url("placeholder3.jpg");
+    min-height: 400px;
+}
+
+/* Fourth image (Courses) */
+.bgimg-4 {
+    background-image: url("placeholder4.jpg");
+    min-height: 400px;
+}
+
+/* Fifth image (Contact) */
+.bgimg-5 {
+    background-image: url("placeholder5.jpg");
     min-height: 400px;
 }
 
@@ -49,6 +63,7 @@ body, html {
         background-attachment: scroll;
     }
 }
+
 </style>
 <body>
 
@@ -60,7 +75,8 @@ body, html {
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TECHNICAL PROJECTS</a>
+	<a href="#work" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-laptop"></i> WORK EXPERIENCE</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TECHNICAL PROJECTS</a><a href="#courses" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> RELEVANT COURSES</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
@@ -70,7 +86,9 @@ body, html {
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+	<a href="#work" class="w3-bar-item w3-button" onclick="toggleFunction()">WORK EXPERIENCE</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PERSONAL PROJECTS</a>
+	<a href="#courses" class="w3-bar-item w3-button" onclick="toggleFunction()">RELEVANT COURSES</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
@@ -87,55 +105,166 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
   <p class="w3-center"><em>UBC Computer Engineering Student</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>My name is Victor and I'm a Computer Engineering student at UBC. Currently, I'm completing a Co-op workterm 
+  with Paragon Testing Enterprises as Junior Software Developer / QA. My developer role involves implementing bug fixes and
+  new features within Paragon's websites, web applications and test centre applications. My role as a QA involves
+  developing and maintaining automated UI based tests meant to emulate a user's workflow throughout Paragon's applications.
+  </p>
+  
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>Victor Xiong</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      <img src="player_headshot.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="250" height="168">
     </div>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-col m6 w3-padding-large">
+	  <p>Various courses and projects have contributed to helping me develop skills applicable to my current Co-op position.
+	  Principles of software construction such as abstraction, hierarchy, and modularity were introduced through CPEN 221 and
+	  these concepts were reinforced in CPSC 261 as a better understanding was provided of basic computer architecture. 
+	  Indeed, hardware oriented courses such as CPEN 211 helped further my understanding of software design principles. Learning
+	  how basic tasks such as function calls were handled through lower level languages, including assembly, made the reasoning
+	  behind certain design decisions apparent. Moreover, CPSC 221 provided knowledge regarding data structures and algorithms,
+	  factors which greatly influence progam runtime.</p>
     </div>
   </div>
-  <p class="w3-large w3-center w3-padding-16">Programming / Hardware Description / Assembly Languages:</p>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>C</p>
+  
+  <p class="w3-large w3-center w3-padding-16">Academic and Work Experience</p>
+  <p class="w3-wide"><i class="fa fa-book"></i>Academic Terms Completed (4/8)</p>
   <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">96%</div>
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
   </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>Verilog</p>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Work Terms Completed (1/5)</p>
   <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">92%</div>
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:20%">20%</div>
   </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>Arm Assembly</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">92%</div>
+  
+  <p class="w3-large w3-center">Proficient in the Following Technologies</p>
+  <p class="w3-center"><em>Click an icon to view the related work/project experience</em></p>
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="CLogo.png" style="width:70%; padding:10px" onclick="moreInfo('cInfo')" class="w3-hover-opacity" alt="C" name="cInfo">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="CPlusPlusLogo.png" style="width:70%; padding:10px" onclick="moreInfo('cPPInfo')" class="w3-hover-opacity" alt="C++">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="CSharpLogo.png" style="width:70%; padding:10px" onclick="moreInfo('cSInfo')" class="w3-hover-opacity" alt="C#">
+    </div>
+	
+	<div class="w3-col m3">
+      <img src="JavaLogo.png" style="width:70%; padding:10px" onclick="moreInfo('JavaInfo')" class="w3-hover-opacity" alt="Java">
+    </div>
   </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>X86 Assembly</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">90%</div>
+	
+	<div id="cInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="cPPInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="cSInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="JavaInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+  
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="PythonLogo.jpg" style="width:70%; padding:10px" onclick="moreInfo('pInfo')" class="w3-hover-opacity" alt="Python">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="VerilogLogo.png" style="width:70%; padding:10px" onclick="moreInfo('vInfo')" class="w3-hover-opacity" alt="Verilog">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="x86Logo.png" style="width:70%; padding:10px" onclick="moreInfo('x86Info')" class="w3-hover-opacity" alt="X86 Assembly">
+    </div>
+	
+	<div class="w3-col m3">
+      <img src="JavaScriptLogo.png" style="width:70%; padding:10px" onclick="moreInfo('JSInfo')" class="w3-hover-opacity" alt="Javascript">
+    </div>
   </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>Python</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">90%</div>
+  
+  <div id="pInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="vInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="x86Info" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="JSInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+  
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="SQLLogo.jpg" style="width:70%; padding:10px" onclick="moreInfo('SQLInfo')" class="w3-hover-opacity" alt="Microsoft SQL">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="JSONLogo.png" style="width:70%; padding:10px" onclick="moreInfo('JSONInfo')" class="w3-hover-opacity" alt="JSON">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="AngularLogo.png" style="width:70%; padding:10px" onclick="moreInfo('AInfo')" class="w3-hover-opacity" alt="Angular">
+    </div>
+	
+	<div class="w3-col m3">
+      <img src="DotNetLogo.png" style="width:70%; padding:10px" onclick="moreInfo('NETInfo')" class="w3-hover-opacity" alt=".Net Framework">
+    </div>
   </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>C++</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">89%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>Java</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">84%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>C#</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">84%</div>
-  </div>
+  
+  <div id="SQLInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="JSONInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="AInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+	
+	<div id="NETInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
 </div>
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
@@ -158,7 +287,56 @@ body, html {
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container w3-opacity-min" id = "work">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">WORK EXPERIENCE</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="paragon">
+	<h2 class="w3-center">Paragon Testing Enterprises</h2>
+	<p class="w3-center"><em>May 2018 - Present</em></p>
+	<p>Paragon Testing Enterprises develops and manages the distribution of English language 
+	proficiency exams including: the Canadian English Language Proficiency Index Program (CELPIP) 
+	Test, the Canadian Academic English Language (CAEL) Assessment, and the Language Proficiency 
+	Index (LPI) Test.</p>
+	<div class="w3-content w3-container w3-padding-16" id="dev">
+		<h3 class="w3-center ">Junior Software Developer</h3>
+		<p>I am responsible for implementing bug fixes and requested new features within Paragon's own
+		web sites, web applications and test center applications. This includes Paragon's sites for its
+		flagship products: the <a href="https://www.cael.ca/">CAEL</a> test, <a href="https://www.celpip.ca/">CELPIP</a> test
+		and the <a href="https://www.lpitest.ca/">LPI</a> test.
+		</p>
+		
+		<p>
+		The development involves working with relational databases and Microsoft's .NET framework. Much of the 
+		front end is done using Angular, Javascript and CSS while the backend of the web applications, including
+		the communication with various tables within the databases involves C Sharp. 
+		</p>
+		
+		<p>
+		Close collaboration with stakeholders and the quality assurance team is done to ensure that requested 
+		features and bug fixes are implemented effectively.
+		</p>
+	</div>
+
+	<div class="w3-content w3-container w3-padding-16" id="qa">
+		<h3 class="w3-center">Quality Assurance</h3>
+		<p>
+		As a QA, I am responible for assisting in the development and maintenance of automated UI tests meant to test the workflow of Paragon's
+		applications. Specflow and Selenium and used to write scripts to test various workflows and scenarios for Paragon's web 
+		based applications. These scripts are written in C Sharp and developed in Visual Studio. Sikuli and Python scripts are 
+		used for rest of Paragon's applications, including test center applications.
+		</p>
+		<p>
+		The remainder of my responsibilities involve testing new features implemented by the development team. This means working with 
+		developers and having a proper understanding of the workflow of all applications.
+		</p>
+	</div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="portfolio">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">TECHNICAL PROJECTS</span>
   </div>
@@ -166,7 +344,7 @@ body, html {
 
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<div class="w3-content w3-container w3-padding-64" id="nhl">
   <h3 class="w3-center">NHL ANDROID APPLICATION</h3>
   <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
@@ -190,12 +368,18 @@ body, html {
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">DETAILS</button>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('NHLInfo')">DETAILS</button>
   </div>
+  
+  <div id="NHLInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<div class="w3-content w3-container w3-padding-64" id="291">
   <h3 class="w3-center">DJANGO FRAMEWORK BASED WEB APPLICATION</h3>
   <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
@@ -219,12 +403,18 @@ body, html {
   </div>
   
   <div class="w3-row-padding w3-center w3-section">
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">DETAILS</button>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('DjangoInfo')">DETAILS</button>
   </div>
+  
+  <div id="DjangoInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<div class="w3-content w3-container w3-padding-64" id="MP5">
   <h3 class="w3-center">DATABASES, QUERIES AND STATISTICAL LEARNING</h3>
   <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
@@ -250,12 +440,18 @@ body, html {
   </div>
   
   <div class="w3-row-padding w3-center w3-section">
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">DETAILS</button>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('mp5Info')">DETAILS</button>
   </div>
+  
+  <div id="mp5Info" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<div class="w3-content w3-container w3-padding-64" id="RISC">
   <h3 class="w3-center">SIMPLE RISC MACHINE</h3>
   <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
@@ -282,9 +478,72 @@ body, html {
 
   <div class="w3-row-padding w3-center w3-section">
 
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">DETAILS</button>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('211Info')">DETAILS</button>
+  </div>
+  
+  <div id="211Info" style="display:none">
+	<h3 class="w3-center">Relevant Experience</h3>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</div>
+</div>
+
+<!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="courses">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">RELEVANT COURSES</span>
   </div>
 </div>
+  <!-- Courses Section -->
+  <br><br>
+  <div class="w3-content w3-container w3-padding-16" id="ASPC160">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">APSC 160 Introduction to Computation in Engineering Design</h3>
+    <p>
+	Analysis and simulation, laboratory data acquisition and processing, measurement interfaces, engineering tools, computer systems organization, programming languages.
+    </p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="CPEN211">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPEN 211 Introduction to Microcomputers</h3>
+    <p>
+	Boolean algebra; combinational and sequential circuits; organization and operation of microcomputers, memory addressing modes, representation of information, instruction sets, machine and assembly language programming, systems programs, I/O structures, I/O interfacing and I/O programming, introduction to digital system design using microcomputers.
+	</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="CPEN221">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPEN 221 Principles of Software Construction</h3>
+    <p>
+	Design, implementation, reasoning about software systems: abstraction and specification of software, testing, verification, abstract data types, object-oriented design, type hierarchies, concurrent software design.
+	</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="CPEN291">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPEN 291 Computer Engineering Design Studio I</h3>
+    <p>
+	Design projects involving hardware (electronic devices and circuits, microcomputers) and software. Use of tools including Arduino, Processing and Git.
+    </p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="CPSC221">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPSC 221 Basic Algorithms and Data Structures</h3>
+    <p>
+	Design and analysis of basic algorithms and data structures; algorithm analysis methods, searching and sorting algorithms, basic data structures, graphs and concurrency.
+    </p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="CPSC261">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPSC 261 Basics of Computer Systems</h3>
+    <p>
+	Software architecture, operating systems, and I/O architectures. Relationships between application software, operating systems, and computing hardware; critical sections, deadlock avoidance, and performance; principles and operation of disks and networks.
+    </p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="MATH220">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">MATH 220 Mathematical Proof</h3>
+    <p style="padding-bottom:50px">
+	Sets and functions; induction; cardinality; properties of the real numbers; sequences, series, and limits. Logic, structure, style, and clarity of proofs emphasized throughout.
+	</p>
+  </div>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -295,15 +554,15 @@ body, html {
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<!-- Fifth Parallax Image with Portfolio Text -->
+<div class="bgimg-5 w3-display-container w3-opacity-min" id="contact">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
+<div class="w3-content w3-container w3-padding-64">
   <h3 class="w3-center">WHERE I WORK</h3>
   <p class="w3-center"><em>I'd love your feedback!</em></p>
 
@@ -350,6 +609,8 @@ body, html {
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+
+
  
 <!-- Add Google Maps -->
 <script>
@@ -395,6 +656,15 @@ function toggleFunction() {
         x.className += " w3-show";
     } else {
         x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function moreInfo(ids) {
+    var x = document.getElementById(ids);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
     }
 }
 </script>
