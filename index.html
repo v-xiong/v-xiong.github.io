@@ -54,15 +54,12 @@ body, html {
     min-height: 400px;
 }
 
+.above {
+	z-index: 2;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
 
 </style>
 <body>
@@ -73,12 +70,44 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-	<a href="#work" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-laptop"></i> WORK EXPERIENCE</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TECHNICAL PROJECTS</a><a href="#courses" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> RELEVANT COURSES</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+	
+	<a href="#home" class="w3-bar-item w3-button">HOME</a>
+	<div class="w3-dropdown-hover w3-hide-small">
+		<a href="#about" class="w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>  
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#awe" class="w3-button above">Academic Work Experience</a>
+			  <a href="#techProf" class="w3-bar-item w3-button above">Technology Proficiency</a>
+			</div>
+	</div>
+	<div class "w3-dropdown-hover w3-hide-small">
+		<a href="#work" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-laptop"></i> WORK EXPERIENCE</a>
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#dev" class="w3-bar-item w3-button above">Developer Role</a>
+			  <a href="#qa" class="w3-bar-item w3-button above">Quality Assurance</a>
+			</div>
+	</div>
+	<div class "w3-dropdown-hover w3-hide-small">
+		<a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TECHNICAL PROJECTS</a>
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#" class="w3-bar-item w3-button above">Academic Work Experience</a>
+			  <a href="#" class="w3-bar-item w3-button above">Technology Proficiency</a>
+			</div>
+	</div>
+	<div class "w3-dropdown-hover w3-hide-small">
+		<a href="#courses" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> RELEVANT COURSES</a>
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#" class="w3-bar-item w3-button above">Academic Work Experience</a>
+			  <a href="#" class="w3-bar-item w3-button above">Technology Proficiency</a>
+			</div>
+	</div>
+	<div class "w3-dropdown-hover w3-hide-small">	
+		<a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#" class="w3-bar-item w3-button above">Academic Work Experience</a>
+			  <a href="#" class="w3-bar-item w3-button above">Technology Proficiency</a>
+			</div>
+	</div>
+		<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
   </div>
@@ -128,7 +157,7 @@ body, html {
     </div>
   </div>
   
-  <p class="w3-large w3-center w3-padding-16">Academic and Work Experience</p>
+  <p class="w3-large w3-center w3-padding-16" id="awe">Academic and Work Experience</p>
   <p class="w3-wide"><i class="fa fa-book"></i>Academic Terms Completed (4/8)</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
@@ -138,7 +167,7 @@ body, html {
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:20%">20%</div>
   </div>
   
-  <p class="w3-large w3-center">Proficient in the Following Technologies</p>
+  <p class="w3-large w3-center" id="techProf">Proficient in the Following Technologies</p>
   <p class="w3-center"><em>Click an icon to view the related work/project experience</em></p>
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
@@ -736,10 +765,39 @@ function moreInfo(ids) {
     var x = document.getElementById(ids);
     if (x.style.display === "none") {
         x.style.display = "block";
+		blockRest(ids);
     } else {
         x.style.display = "none";
     }
 }
+
+function blockRest(ids) {
+	var list = [
+		"cInfo", 
+		"cPPInfo",
+		"cSInfo",
+		"JavaInfo",
+		"pInfo",
+		"vInfo",
+		"x86Info",
+		"JSInfo",
+		"SQLInfo",
+		"JSONInfo",
+		"AInfo",
+		"NETInfo"
+	];
+	
+	var i;
+	for(i = 0; i < list.length; i++){
+		var x = document.getElementById(list[i]);
+		if(ids === list[i]){
+			x.style.display = "block";
+		} else{
+			x.style.display = "none";
+		}
+	}
+}
+
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2XI0k8EusraeWO84Gbegp-5d6mL7ekhU&callback=myMap"></script>
 <!--
