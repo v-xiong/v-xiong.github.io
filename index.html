@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <title>Victor Xiong</title>
 
@@ -152,9 +152,9 @@ body, html {
   </div>
   
   <p class="w3-large w3-center w3-padding-16" id="awe">Academic and Work Experience</p>
-  <p class="w3-wide"><i class="fa fa-book"></i>Academic Terms Completed (4/8)</p>
+  <p class="w3-wide"><i class="fa fa-book"></i>Academic Terms Completed (5/8)</p>
   <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:62.5%">62.5%</div>
   </div>
   <p class="w3-wide"><i class="fa fa-laptop"></i>Work Terms Completed (4/5)</p>
   <div class="w3-light-grey">
@@ -448,6 +448,34 @@ body, html {
   </div>
 </div>
 
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="nhl">
+  <h3 class="w3-center">RENT EASY ANDROID APPLICATION</h3>
+  <p class="w3-center"><em><a href="https://docs.google.com/presentation/d/10Yx73xndeDxpyEqiFf32n6k-wDvhszJXdnGfGF9_jGw/edit#slide=id.g600d85b90c_0_12"> Click here to see the presentation </a></em></p>
+  <p class="w3-center"><em>A React Native app to make finding rental suites easier</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+	<video width="640" height="360" controls>
+  	<source src="renteasy.mp4" type="video/mp4">
+  	Your browser does not support the video tag.
+	</video>
+  </div>
+  </br>
+  
+  <div id="RentEasyInfo" style="display:block">
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				
+				<li>React Native Front End</li>
+				<li>Node JS Backend with MongoDB Hosted on Microsoft Azure VM</li>
+				<li>Non-trivial logic to match users with potential roommates based on search history</li>
+				<li>Chat functionality with real time notifications</li>
+				<li>Uses Firebase Cloud Notifications, Google Places and Google Maps External API</li>
+			</div>
+		</div>	
+	</div>
+</div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="nhl">
@@ -492,15 +520,11 @@ body, html {
       <img src="nhl7.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Drawer Slideover Menu">
     </div>
   </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('NHLInfo')">DETAILS</button>
-  </div>
   
-  <div id="NHLInfo" style="display:none">
+  <div id="NHLInfo" style="display:block">
 		<div style="text-align: center;">
 			<div style="display: inline-block; text-align: left;">
-				
+				<br>
 				<a href="https://github.com/victor-z-xiong/NHL/"><i class="fa fa-github w3-center w3-hover-text-black w3-xxxlarge" style="display:block;margin-left: auto; margin-right: auto;"></i></a><br>			
 				<li>Queries NHL API to return relevant information in JSON Format</li>
 				<li>Android's Volley library is used to perform HTTPS GET Requests</li>
@@ -536,11 +560,7 @@ body, html {
     </div>
   </div>
   
-  <div class="w3-row-padding w3-center w3-section">
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('DjangoInfo')">DETAILS</button>
-  </div>
-  
-  <div id="DjangoInfo" style="display:none">
+  <div id="DjangoInfo" style="display:block">
 	<h3 class="w3-center">Project Description</h3>	
 		<div style="text-align: center;">
 			<div style="display: inline-block; text-align: left;">
@@ -591,11 +611,7 @@ body, html {
     </div>
   </div>
   
-  <div class="w3-row-padding w3-center w3-section">
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('mp5Info')">DETAILS</button>
-  </div>
-  
-  <div id="mp5Info" style="display:none">
+  <div id="mp5Info" style="display:block">
 	<div style="text-align: center;">
 			<div style="display: inline-block; text-align: left;">
 				<li>Worked with datasets involving lists of restaurants, users and reviews in JSON format, resulting in the construction of a mutable database using Java</li>
@@ -634,13 +650,8 @@ body, html {
     </div>
 
   </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="moreInfo('211Info')">DETAILS</button>
-  </div>
   
-  <div id="211Info" style="display:none">
+  <div id="211Info" style="display:block">
 	<div style="text-align: center;">
 			<div style="display: inline-block; text-align: left;">
 				<li>Utilized ModelSim and Quartus to build a simple “Reduced Instruction Set Computer” (RISC) with Verilog, thereby gaining a better understanding of the chip functionality for ARM “instruction set architecture”</li>
@@ -706,8 +717,43 @@ body, html {
   
   <div class="w3-content w3-container w3-padding-16" id="MATH220">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">MATH 220 Mathematical Proof</h3>
-    <p style="padding-bottom:50px">
+    <p>
 	Sets and functions; induction; cardinality; properties of the real numbers; sequences, series, and limits. Logic, structure, style, and clarity of proofs emphasized throughout.
+	</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="ELEC221">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ELEC 221 Signals and Systems</h3>
+    <p>
+	Complex numbers, LTI systems, convolution sum, discrete-time Fourier series and transforms, z-transform, sampling, introduction to filtering and modulation, feedback systems, stability.
+	</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="CPEN331">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPEN 331 Operating Systems</h3>
+    <p>
+	Operating systems, their design and their implementation. Process concurrency, synchronization, communication and scheduling. Device drivers, memory management, virtual memory, file systems, networking and security.
+	</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="CPEN311">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPEN 311 Digital Systems Design</h3>
+    <p>
+	Advanced combinational and sequential electronic system design. Hardware specification, modelling, and simulation using hardware description languages (HDLs) and CAD tools. Design with programmable logic including FPGA's. Applications include complex state machines, microcontrollers, arithmetic circuits, and interface units.
+	</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="CPEN321">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CPEN 321 Software Engineering</h3>
+    <p>
+	Engineering practices for the development of non-trivial software-intensive systems including requirements specification, software architecture, implementation, verification, and maintenance. Iterative development. Recognized standards, guidelines, and models.
+	</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="MATH302">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">MATH 302 Introduction to Probability</h3>
+    <p style="padding-bottom:50px">
+	Basic notions of probability, random variables, expectation and conditional expectation, limit theorems.
 	</p>
   </div>
 
