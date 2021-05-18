@@ -403,6 +403,31 @@ body, html {
         tutorial's duration and answer any questions. Here is a <a href="https://www.students.cs.ubc.ca/~cs-320/2020W2/index.php?page=tutorials&menu=1&submenu=5">link</a>
         to tutorial problems that year. Tutorial 1 wasn't recorded.
 		</p>
+        
+        <i class="fa fa-file w3-center w3-hover-text-black w3-large" onclick="showPdf('201PDF')" style="display:block;margin-left: auto; margin-right: auto; padding-bottom: 10px"> CPSC 320 lecture section 201 Student Evaluation of Teaching Report</i>
+            <object data="cpsc320_201.pdf" type="application/pdf" width="100%" height="500px" id="201PDF" style="display:none">
+                <embed src="cpsc320_201.pdf" type="application/pdf" />
+            </object>
+        <i class="fa fa-file w3-center w3-hover-text-black w3-large" onclick="showPdf('202PDF')" style="display:block;margin-left: auto; margin-right: auto; padding-bottom: 10px"> CPSC 320 lecture section 202 Student Evaluation of Teaching Report</i>
+            <object data="cpsc320_202.pdf" type="application/pdf" width="100%" height="500px" id="202PDF" style="display:none">
+                <embed src="cpsc320_202.pdf" type="application/pdf" />
+            </object>            
+        <i class="fa fa-file w3-hover-text-black w3-large w3-center" onclick="showPdf('t2dPDF')" style="display:block;margin-left: auto; margin-right: auto; padding-bottom: 10px"> CPSC 320 tutorial section T2D Student Evaluation of Teaching Report</i>
+            <object data="cpsc320_t2d.pdf" type="application/pdf" width="100%" height="500px" id="t2dPDF" style="display:none">
+                <embed src="cpsc320_t2d.pdf" type="application/pdf" />
+            </object> 
+        <i class="fa fa-file w3-hover-text-black w3-large w3-center" onclick="showPdf('t2eDF')" style="display:block;margin-left: auto; margin-right: auto; padding-bottom: 10px"> CPSC 320 tutorial section T2E Student Evaluation of Teaching Report</i>
+            <object data="cpsc320_t2e.pdf" type="application/pdf" width="100%" height="500px" id="t2ePDF" style="display:none">
+                <embed src="cpsc320_t2e.pdf" type="application/pdf" />
+            </object> 
+        <i class="fa fa-file w3-hover-text-black w3-large w3-center" onclick="showPdf('t2qPDF')" style="display:block;margin-left: auto; margin-right: auto; padding-bottom: 10px"> CPSC 320 tutorial section T2Q Student Evaluation of Teaching Report</i>
+            <object data="cpsc320_t2q.pdf" type="application/pdf" width="100%" height="500px" id="t2qPDF" style="display:none">
+                <embed src="cpsc320_t2q.pdf" type="application/pdf" />
+            </object>             
+        <i class="fa fa-file w3-hover-text-black w3-large w3-center" onclick="showPdf('t2rPDF')" style="display:block;margin-left: auto; margin-right: auto; padding-bottom: 10px"> CPSC 320 tutorial section T2R Student Evaluation of Teaching Report</i>
+            <object data="cpsc320_t2r.pdf" type="application/pdf" width="100%" height="500px" id="t2rPDF" style="display:none">
+                <embed src="cpsc320_t2r.pdf" type="application/pdf" />
+            </object>             
 	</div>
 </div>
 
@@ -1029,32 +1054,49 @@ function toggleFunction() {
     }
 }
 
-function moreInfo(ids) {
+function showPdf(ids) {
     var x = document.getElementById(ids);
     if (x.style.display === "none") {
         x.style.display = "block";
-		blockRest(ids);
+        var list = [
+            "201PDF", 
+            "202PDF",
+            "t2dPDF",
+            "t2ePDF",
+            "t2qPDF",
+            "t2rPDF"
+        ];
+		blockRest(ids, list);
     } else {
         x.style.display = "none";
     }
 }
 
-function blockRest(ids) {
-	var list = [
-		"cInfo", 
-		"cPPInfo",
-		"cSInfo",
-		"JavaInfo",
-		"pInfo",
-		"vInfo",
-		"x86Info",
-		"JSInfo",
-		"SQLInfo",
-		"JSONInfo",
-		"AInfo",
-		"GITInfo"
-	];
-	
+function moreInfo(ids) {
+    var x = document.getElementById(ids);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        var list = [
+            "cInfo", 
+            "cPPInfo",
+            "cSInfo",
+            "JavaInfo",
+            "pInfo",
+            "vInfo",
+            "x86Info",
+            "JSInfo",
+            "SQLInfo",
+            "JSONInfo",
+            "AInfo",
+            "GITInfo"
+        ];
+		blockRest(ids, list);
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function blockRest(ids, list) {
 	var i;
 	for(i = 0; i < list.length; i++){
 		var x = document.getElementById(list[i]);
