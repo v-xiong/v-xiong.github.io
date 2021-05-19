@@ -54,10 +54,6 @@ body, html {
     min-height: 400px;
 }
 
-.above {
-	z-index: 2;
-}
-
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
@@ -72,41 +68,42 @@ body, html {
     </a>
 	
 	<a href="#home" class="w3-bar-item w3-button" style="color: black">HOME</a>
+    
 	<div class="w3-dropdown-hover w3-hide-small">
-		<a href="#about" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-user"></i> ABOUT</a>  
+		<a href="#about" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-user"></i> ABOUT <i class="fa fa-caret-down"></i></a>  
 			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
-			  <a href="#awe" class="w3-button above">Academic Work Experience</a>
-			  <a href="#techProf" class="w3-bar-item w3-button above">Technology Proficiency</a>
+			  <a href="#awe" class="w3-button">Academic Work Experience</a>
+			  <a href="#techProf" class="w3-bar-item w3-button">Technology Proficiency</a>
 			</div>
 	</div>
 	<div class="w3-dropdown-hover w3-hide-small">
-		<a href="#work" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-laptop"></i> WORK EXPERIENCE</a>
+		<a href="#work" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-laptop"></i> WORK EXPERIENCE <i class="fa fa-caret-down"></i></a>
 			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
-			  <a href="#ta_cpsc_320" class="w3-bar-item w3-button above">Teaching Assistant</a>
-			  <a href="#amazon" class="w3-bar-item w3-button above">Amazon</a>
-			  <a href="#intel" class="w3-bar-item w3-button above">Intel</a>
-			  <a href="#paragon" class="w3-bar-item w3-button above">Paragon</a>
+			  <a href="#ta_cpsc_320" class="w3-bar-item w3-button">Teaching Assistant</a>
+			  <a href="#amazon" class="w3-bar-item w3-button">Amazon</a>
+			  <a href="#intel" class="w3-bar-item w3-button">Intel</a>
+			  <a href="#paragon" class="w3-bar-item w3-button">Paragon</a>
 			</div>
 	</div>
 	<div class="w3-dropdown-hover w3-hide-small">
-		<a href="#portfolio" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-th"></i> TECHNICAL PROJECTS</a>
+		<a href="#portfolio" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-th"></i> TECHNICAL PROJECTS <i class="fa fa-caret-down"></i></a>
 			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
-			  <a href="#capstone" class="w3-bar-item w3-button above">Capstone</a>
-			  <a href="#hydroponics" class="w3-bar-item w3-button above">Modular Hydroponics</a>
-			  <a href="#renteasy" class="w3-bar-item w3-button above">Rent Easy Application</a>
-			  <a href="#nhl" class="w3-bar-item w3-button above">NHL Application</a>
-			  <a href="#291" class="w3-bar-item w3-button above">Django Web Application</a>
-			  <a href="#MP5" class="w3-bar-item w3-button above">Databases and Queries</a>
-			  <a href="#RISC" class="w3-bar-item w3-button above">RISC Machine</a>
+			  <a href="#capstone" class="w3-bar-item w3-button">Capstone</a>
+			  <a href="#hydroponics" class="w3-bar-item w3-button">Modular Hydroponics</a>
+			  <a href="#renteasy" class="w3-bar-item w3-button">Rent Easy Application</a>
+			  <a href="#nhl" class="w3-bar-item w3-button">NHL Application</a>
+			  <a href="#291" class="w3-bar-item w3-button">Django Web Application</a>
+			  <a href="#MP5" class="w3-bar-item w3-button">Databases and Queries</a>
+			  <a href="#RISC" class="w3-bar-item w3-button">RISC Machine</a>
 			</div>
 	</div>
 	<div class="w3-dropdown-hover w3-hide-small">
-		<a href="#courses" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-book"></i> RELEVANT COURSES</a>
+		<a href="#courses" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-book"></i> RELEVANT COURSES <i class="fa fa-caret-down"></i></a>
 			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
-			  <a href="#FirstYear" class="w3-bar-item w3-button above">First Year</a>
-			  <a href="#SecondYear" class="w3-bar-item w3-button above">Second Year</a>
-			  <a href="#ThirdYear" class="w3-bar-item w3-button above">Third Year</a>
-			  <a href="#FourthYear" class="w3-bar-item w3-button above">Fourth Year</a>
+			  <a href="#FirstYear" class="w3-bar-item w3-button">First Year</a>
+			  <a href="#SecondYear" class="w3-bar-item w3-button">Second Year</a>
+			  <a href="#ThirdYear" class="w3-bar-item w3-button">Third Year</a>
+			  <a href="#FourthYear" class="w3-bar-item w3-button">Fourth Year</a>
 			</div>
 	</div>
 	<div class="w3-dropdown-hover w3-hide-small">	
@@ -1053,9 +1050,9 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        navbar.className = "w3-bar" + " w3-card" + " w3-white";
     } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        navbar.className = navbar.className.replace(" w3-card w3-white", "");
     }
 }
 
